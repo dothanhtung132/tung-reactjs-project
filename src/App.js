@@ -1,9 +1,10 @@
 import './App.scss';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
     <div className="app">
-      <h1>Tung Test</h1>
+      <HomePage />
     </div>
   );
 }
