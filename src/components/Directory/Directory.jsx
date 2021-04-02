@@ -38,8 +38,9 @@ const Directory = () => {
     
     return (
         <div className='directory-menu'>
-            {menuData.map(({id, title, imageUrl, size})=> (
-                <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+            {menuData.map(({id, ...rest})=> (
+                // <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+                <MenuItem key={id} {...rest} />
             ))}
         </div>
     );
