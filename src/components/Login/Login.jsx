@@ -24,8 +24,10 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <FormInput name='email' type='email' value={email} required onChange={hangeChange} label='email' />
                 <FormInput name='password' type='password' value={password} required onChange={hangeChange} label='password' />
-                <CustomButton type='submit'>Login</CustomButton>
-                <CustomButton onClick={loginWithGoogle}>Login With Google</CustomButton>
+                <div className='buttons'>
+                    <CustomButton type='submit'>Login</CustomButton>
+                    <CustomButton onClick={loginWithGoogle} customClass='login-with-google-btn'>Login With Google</CustomButton>
+                </div>
             </form>
         </div>
     );
