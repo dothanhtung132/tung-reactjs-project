@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.scss';
 import FormInput from '../FormInput/FormInput';
 import CustomButton from '../CustomButton/CustomButton';
+import {loginWithGoogle} from '../../firebase/firebaseUtils';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -24,6 +25,7 @@ const Login = () => {
                 <FormInput name='email' type='email' value={email} required onChange={hangeChange} label='email' />
                 <FormInput name='password' type='password' value={password} required onChange={hangeChange} label='password' />
                 <CustomButton type='submit'>Login</CustomButton>
+                <CustomButton onClick={loginWithGoogle}>Login With Google</CustomButton>
             </form>
         </div>
     );
